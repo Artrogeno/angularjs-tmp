@@ -1,0 +1,1 @@
+# Angularjs template - website and admin

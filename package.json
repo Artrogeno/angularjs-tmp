@@ -1,0 +1,38 @@
+{
+  "name": "artrogeno",
+  "version": "1.0.0",
+  "description": "portfolio",
+  "main": "app/",
+  "scripts": {
+    "web": "hs app/ -p 8086",
+    "deploy": "grunt",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://artrogeno.github.io"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-bower-install": "^1.6.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-cssmin": "~0.7.0",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-rev": "~0.1.0",
+    "grunt-usemin": "~2.0.2"
+  },
+  "dependencies": {
+    "angular-input-masks": "^3.0.1",
+    "compression": "1.6.2",
+    "ng1bs4": "^0.3.0"
+  },
+  "keywords": [
+    "angularjs",
+    "bootstrap",
+    "css3"
+  ],
+  "author": "Arthur Costa",
+  "license": "ISC"
+}
