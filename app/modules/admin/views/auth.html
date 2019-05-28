@@ -1,0 +1,35 @@
+<div id="page-wraper" class="content-admin">
+
+    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse row">
+            <div class="col offset-md-1 content-breadcrumb">
+                <i ng-class="breadcrumb.icon"></i>
+                <span ng-bind="breadcrumb.title"></span>
+            </div>
+            <div class="col-md-auto">
+                infor content
+            </div>
+            <ul class="navbar-nav col col-lg-1">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item" ng-if="vm.auth.isAuthenticated()">
+                    <a class="nav-link" ng-click="vm.auth.logout()">Log Out</a>
+                </li>
+            </ul>
+        </div>
+        <!-- <div ng-language></div> -->
+    </nav>
+
+    <!-- NAVBAR -->
+    <nav ng-nav profile="profile"></nav>
+    <!-- /.NAVBAR -->
+
+    <!-- MAIN -->
+    <div id="scroll-container" class="container-page" ui-view></div>
+    <!-- /.MAIN -->
+</div>

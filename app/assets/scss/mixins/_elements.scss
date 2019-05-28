@@ -1,0 +1,110 @@
+// FONTS SIZE
+@mixin fonts-size($type, $start, $end, $interval) {
+    @for $i from $start through $end {
+        @if $i <= 9{
+            .fs0#{ $i * $interval } { font-size:  #{ $i * $interval }#{$type} !important; }  
+        }@else{
+            .fs#{ $i * $interval } { font-size:  #{ $i * $interval }#{$type} !important; }  
+        }
+    }
+}
+
+// LINE HEIGHT
+@mixin line-height($type, $start, $end, $interval) {
+    @for $i from $start through $end {
+        @if $i <= 9{
+            .lh0#{ $i * $interval } { line-height:  #{ $i * $interval }#{$type} !important; }  
+        }@else{
+            .lh#{ $i * $interval } { line-height:  #{ $i * $interval }#{$type} !important; }  
+        }
+    }
+}
+
+// PADDING SIZE
+@mixin padding-size($position, $type, $start, $end, $interval) {
+    @for $i from $start through $end {
+        $size-class : '';
+        $element: '';
+        $number: '';
+        $name: '';
+        @if ($i * $interval) <= 9{
+            $size-class : 0#{ $i * $interval };
+        }@else{
+            $size-class : #{ $i * $interval };
+        }
+        @if $position == 'left' {
+           .pd-l#{$size-class} { padding-left: #{ $i * $interval }#{$type} !important; };
+        }
+        @else if $position == right {
+            .pd-r#{$size-class} { padding-right: #{ $i * $interval }#{$type} !important; };
+        }
+        @else if $position == bottom {
+            .pd-b#{$size-class} { padding-bottom: #{ $i * $interval }#{$type} !important; };
+        }
+        @else if $position == top {
+            .pd-t#{$size-class} { padding-top: #{ $i * $interval }#{$type} !important; };
+        }
+        @else{
+            .pd-#{$size-class} { padding: #{ $i * $interval }#{$type} !important; };
+        }
+    }
+}
+// PADDING SIZE
+@mixin margin-size($position, $type, $start, $end, $interval) {
+    @for $i from $start through $end {
+        $size-class : '';
+        $element: '';
+        $number: '';
+        $name: '';
+        @if ($i * $interval) <= 9{
+            $size-class : 0#{ $i * $interval };
+        }@else{
+            $size-class : #{ $i * $interval };
+        }
+        @if $position == 'left' {
+           .mg-l#{$size-class} { margin-left: #{ $i * $interval }#{$type} !important; };
+        }
+        @else if $position == right {
+            .mg-r#{$size-class} { margin-right: #{ $i * $interval }#{$type} !important; };
+        }
+        @else if $position == bottom {
+            .mg-b#{$size-class} { margin-bottom: #{ $i * $interval }#{$type} !important; };
+        }
+        @else if $position == top {
+            .mg-t#{$size-class} { margin-top: #{ $i * $interval }#{$type} !important; };
+        }
+        @else{
+            .mg-#{$size-class} { margin: #{ $i * $interval }#{$type} !important; };
+        }
+    }
+}
+
+// Z-INDEX SIZE
+@mixin zindex($start, $end, $interval) {
+    @for $i from $start through $end {
+        $size-class : '';
+        $element: '';
+        $number: '';
+        $name: '';
+        @if $i <= 9{
+            $size-class : 0#{ $i * $interval };
+        }@else{
+            $size-class : #{ $i * $interval };
+        }
+        .zindex-#{$size-class} { z-index: #{ $i * $interval } !important; };
+    }
+}
+
+// FONTS SIZE
+@mixin width-size($prefix, $type, $start, $end, $interval) {
+    @for $i from $start through $end {
+        $size-class : '';
+        @if $i <= 9{
+            $size-class : #{ $prefix }0#{ $i * $interval };
+        }@else{
+            $size-class : #{ $prefix }#{ $i * $interval };
+        }
+        .w#{$size-class} { width:  #{ $i * $interval }#{$type} !important; }  
+        
+    }
+}

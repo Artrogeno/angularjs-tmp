@@ -1,0 +1,28 @@
+#login{
+    width: 100%;
+	height: 100vh;
+	margin: 0px;
+	padding: 0px;
+	background: $white;
+    background-color: $white;
+    background-image: url(../images/full/15.jpg);
+    background-repeat: repeat;
+    background-position: center top;
+    background-size: cover;
+    z-index: 10;
+    .content-infor,
+    .content-login{
+        position: relative;
+        float: left;
+    }
+    .content-infor{
+        width: 75%;
+        height: 100vh;
+    }
+    .content-login{
+        width: 25%;
+        height: 100vh;
+        background: rgba($white, .8);
+        box-shadow:  0 0 0 1px rgba($black,.1);
+    }
+}

@@ -1,0 +1,48 @@
+<div class="menu-tint menu-trigger menu-type off"></div>
+<div class="menu menu-type off">
+    <div class="menu-left">
+        <figure class="profile">
+            <img src="{{ profile.avatar }}" class="img-responsive" alt="{{ profile.fullname }}" />
+        </figure>
+        <ul class="content-menu">
+            <li class="profile-name" ng-bind="profile.fullname"></li>
+            <li ui-sref-active="active">
+                <a class="menu-item" ui-sref="auth.dashboard" alt="Dashboard">
+                    <i class="fa fa-pie-chart"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a class="menu-item" ui-sref="auth.skills" alt="Skills">
+                    <i class="fa fa-code"></i>                 
+                    <span>Skills</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a class="menu-item" ui-sref="auth.projects">
+                    <i class="fa fa-github"></i>
+                    <span>Project</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a class="menu-item" ui-sref="auth.projects2">
+                    <i class="fa fa-wpforms"></i>
+                    <span>Project2</span>
+                </a>
+            </li>
+            <li>
+                <a class="menu-item text-danger" ng-click="logout();">
+                    <i class="fa fa-power-off"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+
+<div id="menu-trigger" class="menu-trigger">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>

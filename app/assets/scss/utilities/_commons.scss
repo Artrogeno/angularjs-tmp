@@ -1,0 +1,44 @@
+.section-padding {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.section-padding-t {
+    padding-top: 120px;
+}
+
+.section-padding-b {
+    padding-bottom: 120px;
+}
+
+.max-width-700 {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+p {
+    font-size: 14px;
+    color: $gray-700;
+    line-height: 1.6;
+    font-weight: 400;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    &.lead-lg {
+        font-size: 20px;
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+}
+
+.icon-top {
+    margin-bottom: 25px;
+    text-align: center;
+    color: #222;
+    display: inline-block !important;
+    font-size: 35px;
+    line-height: 1;
+    transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+}

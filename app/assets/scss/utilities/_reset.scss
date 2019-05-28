@@ -1,0 +1,120 @@
+html, body, *{
+    outline: none !important;
+}
+a{
+    text-decoration: none;
+}
+.btn{
+    color: $white !important;
+}
+.fixed{
+    position: fixed;
+}
+.absolute{
+    position: absolute;
+}
+.relative{
+    position: relative;
+}
+.pull-left{
+    float: left;
+}
+.pull-right{
+    float: right;
+}
+.pull-inherit{
+    float: inherit;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.cursor-inherit{
+    cursor: inherit;
+}
+.cursor-move{
+    cursor: move;
+}
+.text-underline{
+    text-decoration: underline;
+}
+.text-justify{
+    text-align: justify;
+}
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
+.text-inherit{
+    text-align: inherit;
+}
+.text-unset{
+    text-align: unset;
+}
+.text-start{
+    text-align: start;
+}
+.text-end{
+    text-align: end;
+}
+.text-uppercase{
+    text-transform: uppercase;
+}
+.text-lowercase{
+    text-transform: lowercase;
+}
+.text-capitalize{
+    text-transform: capitalize;
+}
+.text-initial{
+    text-transform: initial;
+}
+.ds-inline-block{
+    display: inline-block;
+}
+.ds-block{
+    display: block;
+}
+.ds-none{
+    display: none;
+}
+.ds-inline{
+    display: inline;
+}
+.ds-flex{
+    display: flex;
+}
+.ds-inline-table{
+    display: inline-table;
+}
+.overflow-h{
+    overflow: hidden;
+}
+.overflow-v{
+    overflow: visible;
+}
+.img-list-grid{
+    height: 45px;
+    width: auto;
+    display: block;
+    cursor: pointer;
+    list-style: none;
+}
+
+// PADDING
+@include padding-size(null    ,"px", 0, 16, 5);
+@include padding-size(left    ,"px", 0, 16, 5);
+@include padding-size(right   ,"px", 0, 16, 5);
+@include padding-size(bottom  ,"px", 0, 16, 5);
+@include padding-size(top     ,"px", 0, 16, 5);
+
+// MARGIN
+@include margin-size(null    ,"px", 0, 16, 5);
+@include margin-size(left    ,"px", 0, 16, 5);
+@include margin-size(right   ,"px", 0, 16, 5);
+@include margin-size(bottom  ,"px", 0, 16, 5);
+@include margin-size(top     ,"px", 0, 16, 5);

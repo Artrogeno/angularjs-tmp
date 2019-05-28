@@ -1,0 +1,55 @@
+<section class="section-padding mg-l80 pd-l80">
+    <div class="widget-box">
+        <div class="row">
+            <div class="widget-body col-sm">
+                <h5 class="box-title mr-b-0">List Skills</h5>
+                <p class="text-muted">statistics, charts and events</p>
+                <a class="btn btn-success pull-right mg-b15" ng-click="vm.openModalCreate();">
+                    <i class="fa fa-plus"></i>
+                    Create
+                </a>
+                <div>
+                    <table class="table">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">#Hash</th>
+                                <th scope="col">Logo</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">UpdatedAt</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody ng-repeat="item in vm.skills">
+                            <tr>
+                                <td ng-bind="item.$id"></td>
+                                <td>
+                                    <img ng-src="{{ item.img }}" alt="{{ item.name }}" class="rounded-0 img-list-grid">
+                                </td>
+                                <th ng-bind="item.name"></th>
+                                <td ng-bind="item.type"></td>
+                                <td ng-bind="item.updated_at"></td>
+                                <td>
+                                    <a class="btn btn-info" ng-click="vm.openModalEdit(item);">
+                                        <i class="fa fa-pencil-square-o"></i>
+                                        Edit
+                                    </a>
+                                    <a class="btn btn-danger" ng-click="vm.openModalDelete(item);">
+                                        <i class="fa fa-trash"></i>
+                                        Delete
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<ng-modal   modal-template="{{ modal.template }}" 
+            modal-open="{{ modal.open }}" 
+            modal-size="{{ modal.size }}">
+</ng-modal>

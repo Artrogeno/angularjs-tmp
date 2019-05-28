@@ -1,0 +1,10 @@
+{
+  "skills_bkp" : {
+    "back-end" : [ "NodeJs", "Express", "Python", "Flask", "Django", "Java", "Golang", "PHP", "Laravel", "Zend", "Symfony", "Ruby", "Ruby on Rails", "Electron", "Webpack", "Socket.IO" ],
+    "database" : [ "MongoDB", "Firebase", "PostgreSQL", "Postgis", "Mysql", "Sqlite" ],
+    "front-end" : [ "Html5", "Css3", "Sass", "Less", "Bootstrap", "Material Design", "JavaScritp", "Jquery", "TypeScript", "Coffeescript", "Jade", "Jasmine", "Karma", "Protractor", "AngularJs", "Angular.IO", "Angular.IO", "Vue.js", "Backbone", "D3.js", "Three.js", "Gulp", "Grunt", "Mocha", "chai", "SinonJS", "Jest" ],
+    "hybrid" : [ "Ionic", "PhoneGap", "Cordova", "Apache Cordova", "ElectronJs" ],
+    "mobile" : [ "Android" ],
+    "others" : [ "Git", "Docker", "Vagrant", "Apache", "Nginx" ]
+  }
+}

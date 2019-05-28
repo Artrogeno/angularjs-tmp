@@ -1,0 +1,51 @@
+<div class="modal-dialog modal-dialog-centered" ng-class="size">
+    <div class="modal-content" ng-if="modal.open" ng-controller="SkillsActionCtrl as vm">
+        <div class="modal-header" ng-class="[vm.theme.bg, vm.theme.fg]">
+            <h5 class="modal-title" ng-bind="modal.info.title"></h5>
+            <button type="button" class="close" ng-class="vm.theme.fg" ng-click="dismiss();">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body material">
+            <form name="formSkills" novalidate>
+                <div class="row">
+                    <div class="col-sm form-group  mg-t10 mg-b10" ng-class="vm.disabledClass">
+                        <input type="text" name="name" ng-model="vm.skill.name" ng-minlength="2" ng-maxlength="35" ng-disabled="{{ vm.disabled }}" required/>
+                        <label for="input" class="control-label pd-l15">Name{{ vm.skill.name }}</label>
+                        <i class="bar"></i>
+                    </div>
+                    <div class="col-sm form-group  mg-t10 mg-b10" ng-class="vm.disabledClass">
+                        <input type="text" name="type" ng-model="vm.skill.type" ng-minlength="3" ng-maxlength="35" ng-disabled="{{ vm.disabled }}" required/>
+                        <label for="input" class="control-label pd-l15">Type</label>
+                        <i class="bar"></i>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm form-group  mg-t10 mg-b10" ng-class="vm.disabledClass">
+                        <input type="text" name="repos" ng-model="vm.skill.repos" ng-minlength="3" ng-disabled="{{ vm.disabled }}"/>
+                        <label for="input" class="control-label pd-l15">Repository</label>
+                        <i class="bar"></i>
+                    </div>
+                    <div class="col-sm form-group  mg-t10 mg-b10" ng-class="vm.disabledClass">
+                        <input type="text" name="img" ng-model="vm.skill.img" ng-minlength="10" ng-disabled="{{ vm.disabled }}"/>
+                        <label for="input" class="control-label pd-l15">Image Link</label>
+                        <i class="bar"></i>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm form-group mg-t10 mg-b10" ng-class="vm.disabledClass">
+                        <textarea  name="desc" ng-model="vm.skill.desc" ng-minlength="2" ng-disabled="{{ vm.disabled }}" required></textarea>
+                        <label for="textarea" class="control-label pd-l15">Description</label>
+                        <i class="bar"></i>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button ng-if="modal.info.action == 'Create'" type="button" class="btn btn-success" ng-click="vm.createData();" ng-bind="modal.info.action" ng-disabled="formSkills.$invalid"></button>
+            <button ng-if="modal.info.action == 'Update'" type="button" class="btn btn-primary" ng-click="vm.updateData();" ng-bind="modal.info.action" ng-disabled="formSkills.$invalid"></button>
+            <button ng-if="modal.info.action == 'Delete'" type="button" class="btn btn-danger" ng-click="vm.deleteData();" ng-bind="modal.info.action" ng-disabled="formSkills.$invalid"></button>
+            <button type="button" class="btn btn-secondary" ng-click="dismiss();">Close</button>
+        </div>
+    </div>
+</div>
